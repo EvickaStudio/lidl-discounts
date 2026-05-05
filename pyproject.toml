@@ -1,0 +1,53 @@
+[project]
+name = "lidl-discounts"
+version = "0.1.0"
+description = "Unofficial Python CLI and wrapper for Lidl Plus store offers"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.13.3",
+    "pydantic-settings>=2.14.0",
+]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+respect-gitignore = true
+force-exclude = true
+exclude = [
+    ".git",
+    ".venv",
+    ".ruff_cache",
+    "__pycache__",
+    "analysis",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+    "W",
+    "TID",
+    "SIM",
+    "RUF",
+]
+
+ignore = [
+    "E501",
+    "RUF001",
+    "SIM102",
+    "PLR0913",
+    "PLR2004",
+]
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+line-ending = "auto"
